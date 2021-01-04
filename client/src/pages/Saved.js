@@ -1,15 +1,23 @@
-import React from "react";
+import React, {Component} from "react";
+import { Container } from "../components/Grid";
 import BookJumbotron from "../components/Jumbotron";
-import SavedBookList from "../components/SavedList";
+import BookCardList from "../components/List";
 
 
-const SavedBooks = (props) => {
+class SavedBooks extends Component {
+    constructor(){
+        super()
+        this.state = {}
+    } 
+    render(){
     return(
         <div>
-            <BookJumbotron title={props.title}/>
-            <SavedBookList/>
+            <BookJumbotron title= {this.title}/>
+            <Container> <BookCardList/> </Container>
+           
         </div>
     )
+    }
 }
 
 
