@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"name": "book-app",
+			"path": "../../.."
+		},
+		{
+			"name": "models",
+			"path": "../../../../.Trash/models"
+		}
+	],
+    "settings": {}
+}
