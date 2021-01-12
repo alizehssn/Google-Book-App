@@ -25,15 +25,6 @@ class SavedBookList extends Component {
       .catch((err) => console.log(err));
   };
 
-  removeBook = (id) => {
-    API.deleteBook(id)
-      .then((res) => {
-        alert(`This book has been deleted`);
-      })
-      .then((res) => this.loadBooks())
-      .catch((err) => console.log(err));
-  };
-
   makeCards = (books, removeBook) => {
     return books.map((book) => {
       return (

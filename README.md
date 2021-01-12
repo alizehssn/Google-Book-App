@@ -14,8 +14,8 @@ A full stack MERN app which allows the user to search and save results from the 
 
 ## Installation
 ***
-Users may clone this [Github repository]() into their local drive and run start in their terminal command line,
- or use the [User Directory application]()
+Users may clone this [Github repository](https://github.com/alizehssn/Google-Book-App) into their local drive and run start in their terminal command line,
+ or use the [React-Book Application](https://agile-basin-25239.herokuapp.com/)
 
  ## Usage
  ***
