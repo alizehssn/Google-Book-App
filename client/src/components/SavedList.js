@@ -40,7 +40,7 @@ class SavedBookList extends Component {
   render() {
     return (
       <Container className="mt-3">
-        {this.makeCards(this.state.books, this.removeBook)}
+        {this.makeCards(this.state.books)}
       </Container>
     );
   }

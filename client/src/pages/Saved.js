@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Container } from "../components/Grid";
 import BookJumbotron from "../components/Jumbotron";
-import BookCardList from "../components/List";
+import SavedBookList from "../components/SavedList";
 
 
 class SavedBooks extends Component {
@@ -13,7 +13,7 @@ class SavedBooks extends Component {
     return(
         <div>
             <BookJumbotron title= {this.title}/>
-            <Container> <BookCardList/> </Container>
+            <Container> <SavedBookList/> </Container>
            
         </div>
     )
