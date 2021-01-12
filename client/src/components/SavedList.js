@@ -31,7 +31,6 @@ class SavedBookList extends Component {
         <BookCard
           key={book._id}
           book={book}
-          removeBook={removeBook}
         ></BookCard>
       );
     });
