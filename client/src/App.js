@@ -6,7 +6,9 @@ import Search from "./pages/Search";
 import Nav from "./components/Navbar"
 import Homepage from "./pages/Homepage";
 
-function App(){
+
+class App extends Component{
+  render(){
   return (
   <Router>
     <div className="App">
@@ -19,7 +21,8 @@ function App(){
       
     </div>
   </Router>
-);}
+)}
+  }
 
 
 

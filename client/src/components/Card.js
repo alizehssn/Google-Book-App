@@ -12,8 +12,8 @@ const BookCard = (props) => {
   return (
     <div 
       className="col-lg-3"
-      id={props.id}
-      key={props.id}
+    
+      key={props._id}
       >
       <div className="img-container">
         <h5>{props.title}</h5>

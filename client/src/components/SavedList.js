@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import BookCard from "./Card";
+import SavedCard from "./SavedCard";
 
 import API from "../utils/API";
 
@@ -9,7 +9,7 @@ class SavedBookList extends Component {
   constructor() {
     super();
     this.state = {
-      books: [],
+      savedBooks: [],
     };
   }
 
@@ -20,26 +20,28 @@ class SavedBookList extends Component {
   loadBooks = () => {
     API.savedBooks()
       .then((res) => {
-        this.setState({ books: res.data });
+        let savedBooks = res.data;
+        this.setState({ savedBooks: savedBooks });
       })
       .catch((err) => console.log(err));
   };
 
-  makeCards = (books, removeBook) => {
-    return books.map((book) => {
+  makeCards = (savedBooks) => {
+    return savedBooks.map(book => {
       return (
-        <BookCard
+        <SavedCard
           key={book._id}
           book={book}
-        ></BookCard>
-      );
-    });
+        ></SavedCard>
+      )
+    })
   };
 
   render() {
+    console.log(this.state)
     return (
-      <Container className="mt-3">
-        {this.makeCards(this.state.books)}
+      <Container>
+        {this.makeCards(this.state.savedBooks)}
       </Container>
     );
   }

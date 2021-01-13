@@ -5,7 +5,10 @@ const API =  {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
     },
     saveBook: function(bookInfo) {
-        return axios.post(`/api/books/${bookInfo.id}`);
+        return axios.post(`/api/books/`, bookInfo);
+    },
+    savedBooks: function(){
+        return axios.get("/api/books")
     }
 };
 export default API;

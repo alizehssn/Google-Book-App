@@ -41,10 +41,10 @@ class Search extends Component {
         let link = bookInfo.link;
         this.setState({title: title, description: description, image: image, link: link})
     // We want to save this book to the database
-      API.saveBook({title: this.state.title, 
-    description: this.state.description,
-    image: this.state.image,
-    link: this.state.link})
+      API.saveBook({title: title, 
+    description:description,
+    image: image,
+    link: link})
         .then(res => console.log("Inside API",res))
         .catch(err => console.log(err));
         alert("Book Saved!")
@@ -77,8 +77,7 @@ class Search extends Component {
                 <Row >
                     {this.state.results.map(book => ( 
                         <BookCard
-                            id={book.id} 
-                            key={book.id} 
+                            key={book._id} 
                             title={book.volumeInfo.title} 
                             authors={book.volumeInfo.authors}
                             description={book.volumeInfo.description} 
